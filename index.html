@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/90a0a5106d.js" crossorigin="anonymous"></script>
+</head>
+<body onload=display_c();>
+    <div class="container">
+        <div class="grid-container">
+                    
+            <div class="item item1" id="de">
+                <img src="./images/WhatsApp_Image_2021-09-17_at_4.png" alt="">
+                <h3>Clock</h3>
+            </div>
+
+            <div class="item item2">
+                
+                <p>TIME</p>
+                <div class="hour t-box">
+                    <div id="show-H">
+
+                    </div>
+                    <div>hours</div>
+                </div>
+                <div style="margin-right: 15px;">:</div>
+                <div class="min t-box">
+                    <div id="show-M">
+
+                    </div>
+                    <div>mins</div>
+                </div>
+                <div style="margin-right: 15px;">:</div>
+                <div class="sec t-box">
+                    <div id="show-S">
+
+                    </div>
+                    <div>secs</div>
+                </div>
+                
+                <div class="AM-PMS t-box" id="show-A"></div>
+            
+                <div class="extra-box1"></div>
+                <div class="extra-box2"></div>
+            </div>
+
+            <div class="item item3">
+                <div class="i3-order">
+                    <div><i class="fas fa-sun"></i></div>
+                    <div class="p">Set wake up time</div>
+                    <div class="dropdown">
+                        <select name="cars" id="cars">
+                        <option value="volvo">8 AM - 9 AM</option>
+                        <option value="saab">9 AM - 10 AM</option>
+                        <option value="mercedes">10 AM - 11 AM</option>
+                        <option value="audi">11 AM - 12 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line-ver">
+
+                </div>
+
+                <div class="i3-order">
+                    <div><i class="fas fa-utensils"></i></div>
+                    <div class="p">Set lunch time</div>
+                    <div class="dropdown">
+                        <select name="cars" id="cars">
+                            <option value="volvo">8 AM - 9 AM</option>
+                            <option value="saab">9 AM - 10 AM</option>
+                            <option value="mercedes">10 AM - 11 AM</option>
+                            <option value="audi">11 AM - 12 PM</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="line-ver">
+
+                </div>
+
+                <div class="i3-order">
+                    <div><i class="fas fa-bed"></i></div>
+                    <div class="p">Set nap time</div>
+                    <div class="dropdown">
+                        <select name="cars" id="cars">
+                            <option value="volvo">8 AM - 9 AM</option>
+                            <option value="saab">9 AM - 10 AM</option>
+                            <option value="mercedes">10 AM - 11 AM</option>
+                            <option value="audi">11 AM - 12 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item item4">
+                <!-- <img src="./images/home.png" alt=""> -->
+                <div class="texx">LET'S HAVE SOME LUNCH !!</div>
+            </div>
+
+            <div class="item item5">
+            <p>GOOD AFTERNOON !!</p>    
+            </div>
+
+            <div class="item item6">
+                <p>PARTY TIME !</p>
+            </div>
+        </div>
+            
+            
+
+    </div>
+    <script>
+        function display(){
+            var ref=1000;
+            myTime=setTimeout('display_c()',ref);
+        }
+        function display_c(){
+            var xh=new Date().getHours();
+            var xm=new Date().getMinutes();
+            var xs=new Date().getSeconds();
+            var xa=(xh<12)? 'AM' : (xh>12) ? 'PM' : "PM";
+            document.getElementById('show-H').innerHTML=xh;
+            document.getElementById('show-M').innerHTML=xm;
+            document.getElementById('show-S').innerHTML=xs;
+            document.getElementById('show-A').innerHTML=xa;
+            display();
+        }
+    </script>
+</body>
+</html>
