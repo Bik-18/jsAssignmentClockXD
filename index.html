@@ -19,7 +19,7 @@
 
             <div class="item item2">
                 
-                <p>TIME NA</p>
+                <p>TIME</p>
                 <div class="hour t-box">
                     <div id="show-H">
 
@@ -52,11 +52,12 @@
                     <div><i class="fas fa-sun"></i></div>
                     <div class="p">Set wake up time</div>
                     <div class="dropdown">
-                        <select name="cars" id="cars">
-                        <option value="volvo">8 AM - 9 AM</option>
-                        <option value="saab">9 AM - 10 AM</option>
-                        <option value="mercedes">10 AM - 11 AM</option>
-                        <option value="audi">11 AM - 12 PM</option>
+                        <select name="cars" id="mtime" >
+                            <option value=4>4 AM - 8 AM</option>
+                            <option value=9>9 AM - 1 PM</option>
+                            <option value=14>2 PM - 6 PM</option>
+                            <option value=19>7 PM - 11 PM</option>
+                            <option value=24>12 PM - 3 AM</option>
                         </select>
                     </div>
                 </div>
@@ -68,11 +69,12 @@
                     <div><i class="fas fa-utensils"></i></div>
                     <div class="p">Set lunch time</div>
                     <div class="dropdown">
-                        <select name="cars" id="cars">
-                            <option value="volvo">8 AM - 9 AM</option>
-                            <option value="saab">9 AM - 10 AM</option>
-                            <option value="mercedes">10 AM - 11 AM</option>
-                            <option value="audi">11 AM - 12 PM</option>
+                        <select name="cars" id="atime">
+                            <option value=4>4 AM - 8 AM</option>
+                            <option value=9>9 AM - 1 PM</option>
+                            <option value=14>2 PM - 6 PM</option>
+                            <option value=19>7 PM - 11 PM</option>
+                            <option value=24>12 PM - 3 AM</option>
                         </select>
                       </div>
                 </div>
@@ -84,11 +86,17 @@
                     <div><i class="fas fa-bed"></i></div>
                     <div class="p">Set nap time</div>
                     <div class="dropdown">
-                        <select name="cars" id="cars">
-                            <option value="volvo">8 AM - 9 AM</option>
-                            <option value="saab">9 AM - 10 AM</option>
-                            <option value="mercedes">10 AM - 11 AM</option>
-                            <option value="audi">11 AM - 12 PM</option>
+                        <select name="cars" id="ntime">
+                            <option value=4>4 AM - 8 AM</option>
+                            <option value=9>9 AM - 1 PM</option>
+                            <option value=14>2 PM - 6 PM</option>
+                            <option value=19>7 PM - 11 PM</option>
+                            <option value=24>12 PM - 3 AM</option>
+                            <!-- <option value="4-8">4 AM - 8 AM</option>
+                            <option value="9-13">9 AM - 1 PM</option>
+                            <option value="14-18">2 PM - 6 PM</option>
+                            <option value="19-23">7 PM - 11 PM</option>
+                            <option value="24-24-1-3">12 PM - 3 AM</option> -->
                         </select>
                     </div>
                 </div>
@@ -112,22 +120,6 @@
             
 
     </div>
-    <script>
-        function display(){
-            var ref=1000;
-            myTime=setTimeout('display_c()',ref);
-        }
-        function display_c(){
-            var xh=new Date().getHours();
-            var xm=new Date().getMinutes();
-            var xs=new Date().getSeconds();
-            var xa=(xh<12)? 'AM' : (xh>12) ? 'PM' : "PM";
-            document.getElementById('show-H').innerHTML=xh;
-            document.getElementById('show-M').innerHTML=xm;
-            document.getElementById('show-S').innerHTML=xs;
-            document.getElementById('show-A').innerHTML=xa;
-            display();
-        }
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
