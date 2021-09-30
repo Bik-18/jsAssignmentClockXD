@@ -149,5 +149,6 @@ body{
     border-radius: 5px;
 }
 .item6 p{
-    margin-left: 24%;
+    margin-left: 16%;
+    cursor: pointer;
 }
